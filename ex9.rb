@@ -13,7 +13,7 @@ puts "Here are the months: ", months
 
 # outputs entire contents I/O paragraph
 # allows you to enter as much output as you want across several lines until you type
-# the magic PARAGRAPH again to actually output to terminal.
+# the magic PARAGRAPH again to actually output to terminal called document syntax <<
 puts <<PARAGRAPH
 There's something going on here.
 With the PARAGRAPH thing
