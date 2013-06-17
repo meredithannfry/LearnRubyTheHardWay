@@ -34,7 +34,8 @@ rewind(current_file)
 
 puts "Let's print three lines:"
 
-# variable current_line is tracking the line number by increasing by 1 each time. Better in a for loop to end of file.
+# variable current_line is tracking the line number by increasing by 1 each time. 
+# Better in a for loop to end of file.
 current_line = 1
 print_a_line(current_line, current_file)
 
