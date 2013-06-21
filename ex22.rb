@@ -464,7 +464,7 @@ def lesson_refresh()
 	$lesson_no = gets.chomp()
 	chosen=prepare_lesson("#$lesson_no")
 	
-	if !chosen == INVALID
+	if chosen != INVALID
 		if "#$lesson_no" == "1"
 			lesson_one()
 		elsif "#$lesson_no" =="2"
