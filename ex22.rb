@@ -1,7 +1,7 @@
 require 'CSV'
 
 #Uppercase variables are constants - they are considered static and so should never change
-INVALID = "invalid, please try again"
+INVALID = "Invalid entry!"
 BORING = "Nothing to see here...move along now"
 
 #Global variables are denoted by $ - they are accessible anywhere
@@ -464,52 +464,54 @@ def lesson_refresh()
 	$lesson_no = gets.chomp()
 	chosen=prepare_lesson("#$lesson_no")
 	
-	if "#$lesson_no" == "1"
-		lesson_one()
-	elsif "#$lesson_no" =="2"
-	 	lesson_two()
-	elsif "#$lesson_no" =="3"
-	 	lesson_three()
-	elsif "#$lesson_no" =="4"
-	 	lesson_four()
-	elsif "#$lesson_no" =="5"
-	 	lesson_five()
-	elsif "#$lesson_no" =="6"
-	 	lesson_six()
-	elsif "#$lesson_no" =="7"
-	 	lesson_seven()
-	elsif "#$lesson_no" =="8"
-	 	lesson_eight()
-	elsif "#$lesson_no" =="9"
-	 	lesson_nine()
-	elsif "#$lesson_no" =="10"
-	 	lesson_ten()
-	elsif "#$lesson_no" =="11"
-	 	lesson_eleven()
-	elsif "#$lesson_no" =="12"
-	 	lesson_twelve()
-	elsif "#$lesson_no" =="13"
-	 	lesson_thirteen()
-	elsif "#$lesson_no" =="14"
-	 	lesson_fourteen()
-	elsif "#$lesson_no" =="15"
-	 	lesson_fifteen()
-	elsif "#$lesson_no" =="16"
-	 	lesson_sixteen()
-	elsif "#$lesson_no" =="17"
-	 	lesson_seventeen()
-	elsif "#$lesson_no" =="18"
-	 	lesson_eighteen()
-	elsif "#$lesson_no" =="19"
-	 	lesson_nineteen()
-	elsif "#$lesson_no" =="20"
-	 	lesson_twenty()
-	elsif "#$lesson_no" =="21"
-	 	lesson_twenty_one()
-	elsif "#$lesson_no" == INVALID
-		 puts "Invalid entry!!"
+	if !chosen == INVALID
+		if "#$lesson_no" == "1"
+			lesson_one()
+		elsif "#$lesson_no" =="2"
+	 		lesson_two()
+		elsif "#$lesson_no" =="3"
+	 		lesson_three()
+		elsif "#$lesson_no" =="4"
+	 		lesson_four()
+		elsif "#$lesson_no" =="5"
+	 		lesson_five()
+		elsif "#$lesson_no" =="6"
+	 		lesson_six()
+		elsif "#$lesson_no" =="7"
+	 		lesson_seven()
+		elsif "#$lesson_no" =="8"
+	 		lesson_eight()
+		elsif "#$lesson_no" =="9"
+	 		lesson_nine()
+		elsif "#$lesson_no" =="10"
+	 		lesson_ten()
+		elsif "#$lesson_no" =="11"
+	 		lesson_eleven()
+		elsif "#$lesson_no" =="12"
+	 		lesson_twelve()
+		elsif "#$lesson_no" =="13"
+	 		lesson_thirteen()
+		elsif "#$lesson_no" =="14"
+	 		lesson_fourteen()
+		elsif "#$lesson_no" =="15"
+	 		lesson_fifteen()
+		elsif "#$lesson_no" =="16"
+	 		lesson_sixteen()
+		elsif "#$lesson_no" =="17"
+	 		lesson_seventeen()
+		elsif "#$lesson_no" =="18"
+	 		lesson_eighteen()
+		elsif "#$lesson_no" =="19"
+	 		lesson_nineteen()
+		elsif "#$lesson_no" =="20"
+	 		lesson_twenty()
+		elsif "#$lesson_no" =="21"
+	 		lesson_twenty_one()
+	 	end
+	else 
+		puts INVALID
+		puts "Signing you off buster!"
 	end
-
 end
 
 lesson_refresh()
